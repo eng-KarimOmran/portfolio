@@ -1,0 +1,12 @@
+<!-- stroke-k.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200" role="img" aria-label="Letter K - stroke">
+  <title>Letter K - Stroke</title>
+  <g fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <!-- vertical stem -->
+    <path d="M30 10 L30 90" />
+    <!-- upper diagonal -->
+    <path d="M30 50 L70 10" />
+    <!-- lower diagonal -->
+    <path d="M30 50 L70 90" />
+  </g>
+</svg>
