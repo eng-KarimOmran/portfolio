@@ -119,3 +119,8 @@
     @apply bg-background text-foreground;
   }
 }
+
+li.active {
+  background: var(--primary-foreground);
+  color: var(--primary);
+}
