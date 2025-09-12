@@ -25,7 +25,7 @@ export default function Education() {
 
   return (
     <>
-      <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <ul className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {educations.map((education, index) => (
           <li
             key={index}

@@ -12,7 +12,7 @@ export default function Resume() {
   return (
     <section id="resume" className="py-10">
       <Title title="Resume" />
-      <ul className="w-full max-w-3xl mx-auto grid grid-cols-3 gap-4 my-2">
+      <ul className="w-full  mx-auto grid grid-cols-3 gap-4 my-2">
         {profileTabs.map((tab) => (
           <li
             key={tab}
@@ -29,7 +29,7 @@ export default function Resume() {
         ))}
       </ul>
 
-      <ScrollArea className="w-full max-w-3xl mx-auto h-96 my-5 bg-primary-foreground whitespace-nowrap rounded-md p-2">
+      <ScrollArea className="w-full mx-auto h-96 my-5 bg-primary-foreground whitespace-nowrap rounded-md p-2">
         {active === "Education" && <Education />}
         {active === "Skills" && <Skills />}
         {active === "About" && <About />}

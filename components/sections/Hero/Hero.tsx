@@ -2,8 +2,6 @@ import { SocialLink } from "@/types";
 import { FaRegFileAlt } from "react-icons/fa";
 import Image from "next/image";
 import Icon from "@/components/common/Icon";
-import DataHero from "@/components/animations/DataHero";
-import ImgHero from "@/components/animations/ImgHero";
 
 export default function Hero() {
   const links: SocialLink[] = [
@@ -15,7 +13,7 @@ export default function Hero() {
 
   return (
     <section className="flex flex-col-reverse md:flex-row justify-between items-center gap-4 py-10 overflow-x-hidden">
-      <DataHero>
+      <div className="flex flex-col items-center md:items-start gap-6 sm:gap-6 md:gap-8">
         <h3 className="scroll-m-20 text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight">
           Full Stack Developer
         </h3>
@@ -56,8 +54,8 @@ export default function Hero() {
             </li>
           ))}
         </ul>
-      </DataHero>
-      <ImgHero>
+      </div>
+      <div className="relative aspect-[3/4] w-10/12 sm:w-9/12 md:w-6/12 lg:w-3/12 rounded-2xl border-2 border-primary">
         <Image
           src="https://res.cloudinary.com/djh0tsi3i/image/upload/v1757599882/hero_zw0xan.png"
           alt="Karim Omran Full Stack Developer Avatar"
@@ -65,7 +63,7 @@ export default function Hero() {
           fill
           priority
         />
-      </ImgHero>
+      </div>
     </section>
   );
 }

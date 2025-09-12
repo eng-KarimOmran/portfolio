@@ -120,7 +120,6 @@
   }
 }
 
-li.active {
-  background: var(--primary-foreground);
-  color: var(--primary);
+html{
+  scroll-behavior: smooth;
 }

@@ -1,19 +1,14 @@
 "use client";
-import { motion } from "motion/react";
 import { LinkNav } from "@/types";
 import Link from "next/link";
 import React, { useCallback, useState } from "react";
 import { ModeToggle } from "./ModeToggle";
 import { Button } from "../ui/button";
 import { TextAlignStart, X } from "lucide-react";
-import { useMediaQuery } from "react-responsive";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const isDesktop = useMediaQuery({ minWidth: 768 });
-
-  console.log(isDesktop);
-
+  
   const toggleMenu = useCallback(() => {
     setOpen((prev) => !prev);
   }, []);
@@ -37,16 +32,10 @@ export default function Navbar() {
         </h1>
       </Link>
 
-      <motion.div
-        initial={{ opacity: 0, x: isDesktop ? 0 : "-100%" }}
-        animate={{
-          x: isDesktop ? 0 : open ? 0 : "-100%",
-          opacity: 1,
-        }}
-        transition={{ duration: 0.5, ease: "easeInOut" }}
-        className={
-          "md:static fixed inset-0 md:bg-transparent bg-primary-foreground/20 z-10 backdrop-blur-sm md:backdrop-blur-none"
-        }
+      <div
+        className={`md:static fixed inset-0 md:bg-transparent bg-primary-foreground/20 z-10 backdrop-blur-sm md:backdrop-blur-none transition-transform duration-800 -translate-x-full md:translate-x-0 ease-in-out ${
+          open && "translate-x-0"
+        }`}
         aria-hidden={!open}
       >
         <div className="md:hidden p-4 text-end">
@@ -67,7 +56,7 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
-      </motion.div>
+      </div>
       <div className="flex justify-center items-center gap-4">
         <ModeToggle />
         <Button

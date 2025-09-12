@@ -24,9 +24,9 @@ export default function About() {
   const profileEntries = Object.entries(profile);
 
   return (
-    <ul className="grid grid-cols-1 md:grid-cols-2 gap-5">
+    <ul className="grid grid-cols-1 md:grid-cols-2 gap-5 text-lg">
       {profileEntries.map(([key, value]) => (
-        <li key={key} className="my-auto">
+        <li key={key} className="bg-muted p-5 rounded-2xl">
           <span className="text-muted-foreground font-semibold capitalize">
             {key.replace("_", " ")}:{" "}
           </span>
