@@ -1,7 +1,11 @@
-import { SocialLink } from "@/types";
 import { FaRegFileAlt } from "react-icons/fa";
 import Image from "next/image";
 import Icon from "@/components/common/Icon";
+
+type SocialLink = {
+  path: string;
+  icon: string;
+};
 
 export default function Hero() {
   const links: SocialLink[] = [

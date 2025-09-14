@@ -1,10 +1,14 @@
 "use client";
-import { LinkNav } from "@/types";
 import Link from "next/link";
 import React, { useCallback, useState } from "react";
 import { ModeToggle } from "./ModeToggle";
 import { Button } from "../ui/button";
 import { TextAlignStart, X } from "lucide-react";
+
+type LinkNav = {
+  path: string;
+  name: string;
+};
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);

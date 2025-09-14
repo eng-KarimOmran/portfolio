@@ -4,7 +4,7 @@ export default function Title({ title }: { title: string }) {
       <span className="scroll-m-20 text-center text-4xl font-extrabold tracking-tight text-balance">
         {title}
       </span>
-      <span className="block h-2 w-10 rounded bg-(--main)" />
+      <span className="block h-0.5 w-12 rounded bg-(--main)" />
     </div>
   );
 }

@@ -32,13 +32,13 @@ export default function SentMe() {
   });
   return (
     <section id="sent-me" className="py-10">
-      <div className="md:col-span-2">
-        <Title title="Sent Me" />
-      </div>
       <form
         onSubmit={formik.handleSubmit}
-        className="w-full p-5 mx-auto rounded-xl grid grid-cols-1 md:grid-cols-2 gap-2 bg-primary-foreground"
+        className="w-full p-5 mx-auto rounded-xl grid grid-cols-1 md:grid-cols-2 gap-2 bg-primary-foreground border-(--main) border"
       >
+        <div className="col-span-2">
+          <Title title="Sent Me" />
+        </div>
         <div className="grid items-center gap-3">
           <Label htmlFor="name">Name :</Label>
           <Input
